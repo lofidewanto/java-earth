@@ -15,6 +15,7 @@ public class HelloEarth {
 		// earth.testBufferedReader();
 
 		earth.testOutput();
+		earth.testLoops();
 	}
 
 	private void testOutput() {
@@ -39,6 +40,11 @@ public class HelloEarth {
 	void testBufferedReader() {
 		EarthInput earthInput = new EarthInput();
 		earthInput.getBufferedReader();
+	}
+
+	private void testLoops() {
+		LoopExamples examples = new LoopExamples();
+		examples.runAllLoops();
 	}
 
 }
