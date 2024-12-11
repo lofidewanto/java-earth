@@ -7,6 +7,12 @@ public class HelloEarth {
 
 		HelloEarth earth = new HelloEarth();
 		earth.testPersonAndStudent();
+
+		earth.testScanner();
+		// Or...
+		// You only can use one or another since System.in will be closed after
+		// using this try (..)
+		// earth.testBufferedReader();
 	}
 
 	public void testPersonAndStudent() {
@@ -16,6 +22,16 @@ public class HelloEarth {
 		Student student = new Student("Alice", "S12345");
 		student.walk(); // Inherited from Person
 		student.learn(); // Specific to Student
+	}
+
+	public void testScanner() {
+		EarthInput earthInput = new EarthInput();
+		earthInput.getScannerInput();
+	}
+
+	public void testBufferedReader() {
+		EarthInput earthInput = new EarthInput();
+		earthInput.getBufferedReader();
 	}
 
 }
