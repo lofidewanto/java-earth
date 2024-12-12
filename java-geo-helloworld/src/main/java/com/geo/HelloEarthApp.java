@@ -1,11 +1,11 @@
 package com.geo;
 
-public class HelloEarth {
+public class HelloEarthApp {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Earth Science Programming!");
 
-		HelloEarth earth = new HelloEarth();
+		HelloEarthApp earth = new HelloEarthApp();
 		earth.testPersonAndStudent();
 
 		earth.testScanner();
@@ -18,9 +18,11 @@ public class HelloEarth {
 		earth.testLoops();
 	}
 
+	// Private visibility:
+	// https://chatgpt.com/share/675a9dea-ca8c-800c-89fd-ffa4cd9e5460
 	private void testOutput() {
-		EarthOutput earthOutput = new EarthOutput();
-		earthOutput.setOutput();
+		OutputExamples outputExamples = new OutputExamples();
+		outputExamples.setOutput();
 	}
 
 	private void testPersonAndStudent() {
@@ -32,14 +34,16 @@ public class HelloEarth {
 		student.learn(); // Specific to Student
 	}
 
+	// Package visibility:
+	// https://chatgpt.com/share/675a9dea-ca8c-800c-89fd-ffa4cd9e5460
 	void testScanner() {
-		EarthInput earthInput = new EarthInput();
-		earthInput.getScannerInput();
+		InputExamples inputExamples = new InputExamples();
+		inputExamples.getScannerInput();
 	}
 
 	void testBufferedReader() {
-		EarthInput earthInput = new EarthInput();
-		earthInput.getBufferedReader();
+		InputExamples inputExamples = new InputExamples();
+		inputExamples.getBufferedReader();
 	}
 
 	private void testLoops() {

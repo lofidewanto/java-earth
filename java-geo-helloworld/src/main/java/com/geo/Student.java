@@ -21,4 +21,11 @@ public class Student extends Person {
 		System.out.println(getName() + " is learning.");
 	}
 
+	@Override
+	public void walk() {
+		super.walk();
+
+		System.out.println(getName() + " is walking slowly.");
+	}
+
 }

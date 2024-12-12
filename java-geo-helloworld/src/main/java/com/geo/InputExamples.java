@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class EarthInput {
+public class InputExamples {
 
 	public void getScannerInput() {
 		try (Scanner scanner = new Scanner(System.in)) {

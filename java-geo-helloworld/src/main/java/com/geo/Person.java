@@ -16,7 +16,7 @@ public class Person {
 	}
 
 	// Method: walk
-	public void walk() {
+	protected void walk() {
 		System.out.println(name + " is walking.");
 	}
 

@@ -1,6 +1,6 @@
 package com.geo;
 
-public class EarthOutput {
+public class OutputExamples {
 
 	public void setOutput() {
 		System.out.print("Hello"); // Output: Hello
