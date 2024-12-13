@@ -1,16 +1,26 @@
 package com.geo;
 
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.GeometryFactory;
+import org.locationtech.jts.geom.Point;
+
 public class GeoDistanceCalculator {
 
 	public static void main(String[] args) {
-		double calculatedDistance = new GeoDistanceCalculator().calculateDistance();
+		GeoDistanceCalculator geoDistanceCalculator = new GeoDistanceCalculator();
 
-		// Print the result
+		double calculatedDistance = geoDistanceCalculator.calculateDistanceWithMath();
+
+		// Print the result Math
 		System.out.printf("The distance between Paris and Los Angeles is %.2f kilometers.%n", calculatedDistance);
 
+		calculatedDistance = geoDistanceCalculator.calculateDistanceWithJts();
+
+		// Print the result JTS
+		System.out.printf("Distance in kilometers: %.2f km%n", calculatedDistance);
 	}
 
-	double calculateDistance() {
+	double calculateDistanceWithMath() {
 		// Coordinates of Point A (Paris)
 		double lat1 = 48.8566;
 		double lon1 = 2.3522;
@@ -40,5 +50,26 @@ public class GeoDistanceCalculator {
 		double distance = R * c;
 
 		return distance;
+	}
+
+	double calculateDistanceWithJts() {
+		// Create a GeometryFactory instance
+		GeometryFactory geometryFactory = new GeometryFactory();
+
+		// Define two points using their coordinates
+		Point pointA = geometryFactory.createPoint(new Coordinate(2.3522, 48.8566)); // Paris
+		Point pointB = geometryFactory.createPoint(new Coordinate(-118.2437, 34.0522)); // Los Angeles
+
+		// Calculate the distance (in degrees; convert as needed for Earth coordinates)
+		double distance = pointA.distance(pointB);
+
+		System.out.printf("Distance between Paris and Los Angeles (in degrees): %.4f%n", distance);
+
+		// Convert degrees to kilometers (approximation)
+		double earthRadiusKm = 6371.0;
+		double distanceInKm = distance * (Math.PI / 180) * earthRadiusKm;
+
+		return distanceInKm;
+
 	}
 }
