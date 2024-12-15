@@ -9,6 +9,7 @@ This course introduces participants to the fundamental concepts of Java programm
 This course introduces a new approach by seamlessly integrating with ChatGPT. Each slide includes a direct link, enabling you to explore every topic in depth through interactive discussions with ChatGPT.
 
 # Links
+- [Article in LinkedIn](https://bit.ly/JavaGeoLinkedIn)
 - [Bio](https://bit.ly/JavaGeoBio)
 - [Slides](https://bit.ly/JavaGeoSlides)
 - [GitHub repository](https://github.com/lofidewanto/java-earth)
