@@ -25,4 +25,9 @@ class LoopExamplesTest {
 		assertEquals(5, result);
 	}
 
+	@Test
+	void stream_example() {
+		examples.streamApiExample();
+	}
+
 }
