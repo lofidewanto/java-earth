@@ -15,12 +15,12 @@ class LoopExamplesTest {
 	}
 
 	@Test
-	void testForLoop() {
+	void for_loop_example() {
 		examples.forLoop();
 	}
 
 	@Test
-	void testWhileLoop() {
+	void while_loop_example() {
 		Integer result = examples.whileLoop();
 		assertEquals(5, result);
 	}
