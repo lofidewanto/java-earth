@@ -50,7 +50,9 @@ public class GeoLineChart extends Application {
 
 		// Add the chart and line to the scene
 		chart.setAnimated(false); // Disable animation for consistency
-		chart.getChildrenUnmodifiable().add(connectingLine);
+
+		// TODO Change in JavaFX 23, no getChildren!
+		// chart.getChildren().add(connectingLine);
 
 		Scene scene = new Scene(chart, 800, 600);
 		stage.setScene(scene);
@@ -73,6 +75,6 @@ public class GeoLineChart extends Application {
 	}
 
 	public static void main(String[] args) {
-		launch();
+		launch(args);
 	}
 }
