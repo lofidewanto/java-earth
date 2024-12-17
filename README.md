@@ -16,4 +16,8 @@ This course introduces a new approach by seamlessly integrating with ChatGPT. Ea
 - [Announcement LinkedIn](https://bit.ly/JavaGeoAnnouncement)
 - [Abstract](https://bit.ly/JavaGeoAbstract)
 
+# Running the Apps
+- Run them simply using Maven or Eclipse Run
+- JavaFX apps can be run using `mvn javafx:run`
+
 
